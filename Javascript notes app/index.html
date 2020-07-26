@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Simple notes app, with the ability to add notes, delete notes and change color of notes-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 1 Problem 3</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <h1>Notes app</h1>
+
+    
+    <div class="container">
+        <div class="addnote">
+                <div>
+                    Make a new note by typing in the text field below and clicking add note or 
+                    click on the text in an existing note to edit it.
+                    <br>
+                    <br>
+                    notes can be deleted by clicking the "x" button on the top right
+                </div>
+            <form>
+            <textarea name="noteText" id="noteText"></textarea>
+                <br>
+                <select name="noteColor" id="noteColor">
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    </select>
+                    <br>
+                    <button id="addButton">Add note</button>
+            </form>
+        </div>
+    </div>
+        
+    <div id="notes"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

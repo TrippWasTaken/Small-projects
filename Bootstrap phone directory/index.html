@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div>
+                    <h2 class="text-center">Phone Directory</h2>
+                </div>
+                <section style="margin-top:40px;">
+                    <form id= "person-form">
+                    <div class="row justify-content-center" style="height:60px; background-color:#c3d8e7;">
+                            <div class="col-auto align-self-center"><input type="text" id="person" placeholder="Contact Name" inputmode="latin-name" required></div>
+                            <div class="col-auto align-self-center"><input type="tel" id="phone" placeholder="Phone Number" required></div>
+                            <div class="col-auto align-self-center"><input type="email" id="email" placeholder="Email"  required></div>
+                            <div class="col-auto align-self-center"><button class="btn btn-primary" type="submit" value="submit">Add</button></div>
+                    </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="row no-gutters justify-content-center" style="margin-top:40px;">
+        <div class="col-auto">
+            <div>
+                <p>Search contact by Mobile No:&nbsp;</p>
+            </div>
+        </div>
+        <div class="col-auto align-self-center"><input type="tel" id="search" onkeyup="search()"></div>
+    </div>
+    <div class="row" style="margin-top:40px;">
+        <div class="col">
+            <div>
+                <h3 class="text-center">Contacts</h3>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="table-responsive table-bordered m-auto" style="width:700px;">
+            <table class="table table-bordered" id="contact-list">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="people-list">
+                </tbody>
+            </table>
+            <div id="no-result" style = "visibility: hidden;">
+                <p> No contacts Found</p>
+            </div>
+        </div>
+    </section>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
